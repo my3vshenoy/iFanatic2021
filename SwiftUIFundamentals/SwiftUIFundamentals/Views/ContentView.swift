@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showAlert = false
     @State private var sliderValue = 10.0
-    @State private var game: GameLogic = GameLogic()
+    @State private var game = GameLogic()
     
     var body: some View {
         VStack {

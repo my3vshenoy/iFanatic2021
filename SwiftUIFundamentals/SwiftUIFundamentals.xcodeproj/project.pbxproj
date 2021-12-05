@@ -11,6 +11,7 @@
 		BA876BE52759DD5100A7C9D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876BE42759DD5100A7C9D9 /* ContentView.swift */; };
 		BA876BE72759DD5200A7C9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA876BE62759DD5200A7C9D9 /* Assets.xcassets */; };
 		BA876BEA2759DD5200A7C9D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA876BE92759DD5200A7C9D9 /* Preview Assets.xcassets */; };
+		BAF13066275AB56000F690A3 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF13065275AB56000F690A3 /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BA876BE42759DD5100A7C9D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA876BE62759DD5200A7C9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA876BE92759DD5200A7C9D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAF13065275AB56000F690A3 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +53,9 @@
 		BA876BE12759DD5100A7C9D9 /* SwiftUIFundamentals */ = {
 			isa = PBXGroup;
 			children = (
-				BA876BE22759DD5100A7C9D9 /* SwiftUIFundamentalsApp.swift */,
-				BA876BE42759DD5100A7C9D9 /* ContentView.swift */,
-				BA876BE62759DD5200A7C9D9 /* Assets.xcassets */,
+				BAF13064275AB51100F690A3 /* App */,
+				BAF13063275AB4E400F690A3 /* Views */,
+				BAF13062275AB4D700F690A3 /* Models */,
 				BA876BE82759DD5200A7C9D9 /* Preview Content */,
 			);
 			path = SwiftUIFundamentals;
@@ -65,6 +67,31 @@
 				BA876BE92759DD5200A7C9D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAF13062275AB4D700F690A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAF13065275AB56000F690A3 /* GameLogic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAF13063275AB4E400F690A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA876BE42759DD5100A7C9D9 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BAF13064275AB51100F690A3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BA876BE62759DD5200A7C9D9 /* Assets.xcassets */,
+				BA876BE22759DD5100A7C9D9 /* SwiftUIFundamentalsApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF13066275AB56000F690A3 /* GameLogic.swift in Sources */,
 				BA876BE52759DD5100A7C9D9 /* ContentView.swift in Sources */,
 				BA876BE32759DD5100A7C9D9 /* SwiftUIFundamentalsApp.swift in Sources */,
 			);

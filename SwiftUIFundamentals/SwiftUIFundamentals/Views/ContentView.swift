@@ -25,6 +25,7 @@ struct ContentView: View {
                 VStack {
                     VStack {
                         Text("🎯 Put the bullseye as close as you can 🎯".uppercased())
+                            .foregroundColor(Color("TextColor")) // Asset Catalog
                             .kerning(2.0)
                             .bold()
                             .multilineTextAlignment(.center)
@@ -39,10 +40,12 @@ struct ContentView: View {
                         HStack {
                             Text("1")
                                 .bold()
+                                .foregroundColor(Color("TextColor")) // Asset Catalog
                                 .fontWeight(.black)
                             Slider(value: $sliderValue, in: 1.0...100.0)
                             Text("100")
                                 .bold()
+                                .foregroundColor(Color("TextColor")) // Asset Catalog
                                 .fontWeight(.black)
                         }
                         .padding(20)
@@ -77,6 +80,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         ContentView()
+            .previewLayout(.fixed(width: 568, height: 320))
+        ContentView()
+            .preferredColorScheme(.dark)
+        ContentView()
+            .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 568, height: 320))
     }
 }

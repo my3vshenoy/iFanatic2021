@@ -17,10 +17,14 @@ struct ContentView: View {
             // Custom Color
             // Color(red: 243/255.0, green: 248/255.0, blue: 253/255.0)
             
+            // ---- Replaced with BackgroundView ---
             // Asset Catalog Color
-            Color("BackgroundColor")
+            // Color("BackgroundColor")
             // Ignore Safe Area
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            //   .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
+            BackgroundView(game: $game)
+            
             VStack {
                 VStack {
                     VStack {

@@ -14,6 +14,7 @@
 		BAF13066275AB56000F690A3 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF13065275AB56000F690A3 /* GameLogic.swift */; };
 		BAF1306E275C545A00F690A3 /* SwiftUIFundamentalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1306D275C545A00F690A3 /* SwiftUIFundamentalsTests.swift */; };
 		BAF13075275C7B7A00F690A3 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF13074275C7B7A00F690A3 /* TextViews.swift */; };
+		BAF13077275D2DF600F690A3 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF13076275D2DF600F690A3 /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BAF1306B275C545A00F690A3 /* SwiftUIFundamentalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIFundamentalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1306D275C545A00F690A3 /* SwiftUIFundamentalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFundamentalsTests.swift; sourceTree = "<group>"; };
 		BAF13074275C7B7A00F690A3 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		BAF13076275D2DF600F690A3 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				BA876BE42759DD5100A7C9D9 /* ContentView.swift */,
 				BAF13074275C7B7A00F690A3 /* TextViews.swift */,
+				BAF13076275D2DF600F690A3 /* Shapes.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				BAF13066275AB56000F690A3 /* GameLogic.swift in Sources */,
 				BAF13075275C7B7A00F690A3 /* TextViews.swift in Sources */,
+				BAF13077275D2DF600F690A3 /* Shapes.swift in Sources */,
 				BA876BE52759DD5100A7C9D9 /* ContentView.swift in Sources */,
 				BA876BE32759DD5100A7C9D9 /* SwiftUIFundamentalsApp.swift in Sources */,
 			);

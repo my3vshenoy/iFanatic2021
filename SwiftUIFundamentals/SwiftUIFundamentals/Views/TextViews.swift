@@ -51,6 +51,22 @@ struct ButtonText: View {
     }
 }
 
+struct LabelText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .kerning(-1)
+            .fontWeight(.black)
+            .font(.title)
+            .frame(width: 80, height: 56)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+            )
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -58,6 +74,7 @@ struct TextViews_Previews: PreviewProvider {
             BigNumberText(text: "999")
             SliderLabelText(text: "99")
             ButtonText(text: "Button Text")
+            LabelText(text: "999")
         }
     }
 }

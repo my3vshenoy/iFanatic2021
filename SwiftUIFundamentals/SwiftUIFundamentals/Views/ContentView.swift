@@ -95,6 +95,18 @@ struct HitMeButtonView: View {
     }
 }
 
+struct BottomLabelView: View {
+    let titleText: String
+    let numberText: String
+    
+    var body: some View {
+        VStack {
+            InstructionText(text: titleText)
+            LabelText(text: numberText)
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -31,10 +31,12 @@ struct ContentView: View {
                     PointsAlertView(showAlert: $showAlert,
                                     sliderValue: $sliderValue,
                                     game: $game)
+                        .transition(.scale)
                 } else {
                     HitMeButtonView(showAlert: $showAlert,
                                     sliderValue: $sliderValue,
                                     game: $game)
+                        .transition(.scale)
                 }
             }
             
@@ -75,7 +77,9 @@ struct HitMeButtonView: View {
     
     var body: some View {
         Button(action: {
-            showAlert = true
+            withAnimation {
+                showAlert = true
+            }
         }) {
             ButtonText(text: "Hit Me")
         }

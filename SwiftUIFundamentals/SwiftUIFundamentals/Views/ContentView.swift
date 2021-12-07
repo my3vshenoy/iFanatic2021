@@ -23,17 +23,24 @@ struct ContentView: View {
             // Ignore Safe Area
             //   .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            BackgroundView(game: $game)
+            BackgroundView(game: $game, showAlert: $showAlert)
             
             VStack {
-                InstructionsView(game: $game).padding(.bottom, 100)
-                HitMeButtonView(showAlert: $showAlert,
-                                sliderValue: $sliderValue,
-                                game: $game)
-                
+                InstructionsView(game: $game).padding(.bottom, showAlert ? 0 : 100)
+                if showAlert {
+                    PointsAlertView(showAlert: $showAlert,
+                                    sliderValue: $sliderValue,
+                                    game: $game)
+                } else {
+                    HitMeButtonView(showAlert: $showAlert,
+                                    sliderValue: $sliderValue,
+                                    game: $game)
+                }
             }
             
-            SliderView(sliderValue: $sliderValue)
+            if !showAlert {
+                SliderView(sliderValue: $sliderValue)
+            }
         }
     }
 }
@@ -67,8 +74,6 @@ struct HitMeButtonView: View {
     @Binding var game: GameLogic
     
     var body: some View {
-        let points = game.points(sliderValue: Int(sliderValue.rounded()))
-        
         Button(action: {
             showAlert = true
         }) {
@@ -87,12 +92,15 @@ struct HitMeButtonView: View {
             RoundedRectangle(cornerRadius: 21.0) // Corner radius for the Border
                 .strokeBorder(Color.white, lineWidth: 2.0)
         )
-        .alert(isPresented: $showAlert) {
-            let roundedValue = Int(sliderValue.rounded())
-            return Alert(title: Text("Hello There!"), message: Text("Slider value: \(roundedValue)\n" + "Points this round: \(points)"), dismissButton: .default(Text("Awesome")) {
-                game.startNewRound(points: points)
-            })
-        }
+        
+        // Remove when replaced with custom alert
+        // ---- Replaced with PointsAlertView ---
+//        .alert(isPresented: $showAlert) {
+//            let roundedValue = Int(sliderValue.rounded())
+//            return Alert(title: Text("Hello There!"), message: Text("Slider value: \(roundedValue)\n" + "Points this round: \(points)"), dismissButton: .default(Text("Awesome")) {
+//                game.startNewRound(points: points)
+//            })
+//        }
     }
 }
 

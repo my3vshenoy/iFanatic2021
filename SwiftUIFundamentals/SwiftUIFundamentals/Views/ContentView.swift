@@ -26,16 +26,14 @@ struct ContentView: View {
             BackgroundView(game: $game)
             
             VStack {
-                VStack {
-                    VStack {
-                        InstructionsView(game: $game)
-                        SliderView(sliderValue: $sliderValue)
-                        HitMeButtonView(showAlert: $showAlert,
-                                        sliderValue: $sliderValue,
-                                        game: $game)
-                    }
-                }
+                InstructionsView(game: $game).padding(.bottom, 100)
+                HitMeButtonView(showAlert: $showAlert,
+                                sliderValue: $sliderValue,
+                                game: $game)
+                
             }
+            
+            SliderView(sliderValue: $sliderValue)
         }
     }
 }
@@ -69,6 +67,8 @@ struct HitMeButtonView: View {
     @Binding var game: GameLogic
     
     var body: some View {
+        let points = game.points(sliderValue: Int(sliderValue.rounded()))
+        
         Button(action: {
             showAlert = true
         }) {
@@ -76,9 +76,9 @@ struct HitMeButtonView: View {
         }
         .padding(16.0)
         .background(ZStack {
-            Color("ButtonColor")
+            Color("ButtonColor") // Asset Color
             LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.blue]), startPoint: .top, endPoint: .bottom)
-        }) // Asset Color
+        })
         .foregroundColor(.white)
         .cornerRadius(21.0) // Corner radius for the button
         
@@ -89,8 +89,9 @@ struct HitMeButtonView: View {
         )
         .alert(isPresented: $showAlert) {
             let roundedValue = Int(sliderValue.rounded())
-            let points = game.points(sliderValue: Int(sliderValue.rounded()))
-            return Alert(title: Text("Hello There!"), message: Text("Slider value: \(roundedValue)\n" + "Points this round: \(points)"), dismissButton: .default(Text("Awesome")))
+            return Alert(title: Text("Hello There!"), message: Text("Slider value: \(roundedValue)\n" + "Points this round: \(points)"), dismissButton: .default(Text("Awesome")) {
+                game.startNewRound(points: points)
+            })
         }
     }
 }

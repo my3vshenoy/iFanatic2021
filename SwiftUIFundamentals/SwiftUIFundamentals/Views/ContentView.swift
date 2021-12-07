@@ -89,12 +89,12 @@ struct HitMeButtonView: View {
             LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.blue]), startPoint: .top, endPoint: .bottom)
         })
         .foregroundColor(.white)
-        .cornerRadius(21.0) // Corner radius for the button
+        .cornerRadius(Constants.General.roundedRectCornerRadius) // Corner radius for the button
         
         // Overlay: A view that gets drawn on top of everything else
         .overlay(
-            RoundedRectangle(cornerRadius: 21.0) // Corner radius for the Border
-                .strokeBorder(Color.white, lineWidth: 2.0)
+            RoundedRectangle(cornerRadius: Constants.General.roundedRectCornerRadius) // Corner radius for the Border
+                .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
         )
         
         // Remove when replaced with custom alert

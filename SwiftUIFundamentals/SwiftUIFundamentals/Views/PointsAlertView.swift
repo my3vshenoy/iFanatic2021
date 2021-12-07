@@ -13,7 +13,7 @@ struct PointsAlertExampleView: View {
             .padding()
             .frame(maxWidth: UIScreen.main.bounds.width - UIScreen.main.bounds.width/4)
             .background(Color("BackgroundColor"))
-            .cornerRadius(21.0)
+            .cornerRadius(Constants.General.roundedRectCornerRadius)
             .shadow(radius: 10, x: 5, y: 5)
     }
 }
@@ -42,7 +42,7 @@ struct PointsAlertView: View {
         .padding()
         .frame(maxWidth: UIScreen.main.bounds.width - UIScreen.main.bounds.width/4)
         .background(Color("BackgroundColor"))
-        .cornerRadius(21.0)
+        .cornerRadius(Constants.General.roundedRectCornerRadius)
         .shadow(radius: 10, x: 5, y: 5)
         .transition(.scale)
     }

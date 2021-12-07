@@ -59,10 +59,10 @@ struct LabelText: View {
             .kerning(-1)
             .fontWeight(.black)
             .font(.title)
-            .frame(width: 80, height: 56)
+            .frame(width: 80, height: Constants.General.roundedViewLength)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth)
             )
     }
 }

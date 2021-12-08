@@ -96,6 +96,34 @@ struct AlertButtonText: View {
     }
 }
 
+struct ScoreText: View {
+    var score: Int
+    
+    var body: some View {
+        // Bold the text, not the button
+        Text(String(score))
+            .bold()
+            .kerning(-0.2)
+            .font(.title3)
+            .foregroundColor(Color("TextColor"))
+            
+    }
+}
+
+struct DateText: View {
+    var date: Date
+    
+    var body: some View {
+        // Bold the text, not the button
+        Text(date, style: .time)
+            .bold()
+            .kerning(-0.2)
+            .font(.title3)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -106,6 +134,8 @@ struct TextViews_Previews: PreviewProvider {
             LabelText(text: "999")
             AlertBodyText(text: "You scored 200 pts")
             AlertButtonText(text: "Start new round")
+            ScoreText(score: 450)
+            DateText(date: Date())
         }
         .padding()
     }

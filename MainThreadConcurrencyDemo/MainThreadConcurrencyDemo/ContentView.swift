@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var calculationDisabled = false
     
     let operation = CalculatePrimeOperation()
     var body: some View {
@@ -20,6 +21,7 @@ struct ContentView: View {
             }) {
                 Text("Calculate Primes")
             }
+            .disabled(calculationDisabled)
             
             Spacer()
         }
@@ -27,13 +29,26 @@ struct ContentView: View {
     
     /// let mainThreadOperationQueueExample = OperationQueue.main
     func calculatePrimes() {
-        let queue  =  OperationQueue()
-        queue.addOperation {
+        // GCD
+        // qos: Quality of service
+        // .userInitiated: You might use this quality-of-service class to load the content of an email that you want to display to the user.
+        calculationDisabled = true
+        DispatchQueue.global(qos: .userInitiated).async {
             for number in 0...1_000_000 {
                 let isPrimeNumber = self.isPrime(number: number)
                 print("\(number) is a prime: \(isPrimeNumber)")
             }
+            calculationDisabled = false
         }
+        
+// Commented code to do the operation using OperationQueue
+//        let queue  =  OperationQueue()
+//        queue.addOperation {
+//            for number in 0...1_000_000 {
+//                let isPrimeNumber = self.isPrime(number: number)
+//                print("\(number) is a prime: \(isPrimeNumber)")
+//            }
+//        }
     }
     
     func isPrime(number: Int) -> Bool {

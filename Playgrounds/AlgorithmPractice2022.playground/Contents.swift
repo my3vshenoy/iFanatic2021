@@ -83,3 +83,38 @@ func isBalanced(for string: String) -> Bool {
 isBalanced(for: balancedParantheses)
 isBalanced(for: unbalanced)
 
+// ================== isPrimeNumber =======================
+
+func isPrime(number: Int) -> Bool {
+    // Anything less than 1
+    if number <= 1 {
+        return false
+    }
+    
+    // 1, 2, 3 = Prime
+    if number <= 3 {
+        return true
+    }
+    
+    // Prime numbers = Divisible by 1 and itself
+    // Opposite of Prime number is Composite
+    // 2 is the only even prime number
+    // 2 and 3 are the only consecutive prime numbers
+    
+    // Logic: Iterate from 1 to sqrt(n) to find all the factors of n
+    // So from 1 to sqrt(n), we would find exactly one factpr, i.e., 1
+    // If does have more than one factor, it is not prime. i.e., number % i == 0
+    var i = 2
+    while i * i <= number { // 4 <= 5
+        if number % i == 0 { // 5 * 4 != 0
+            return false
+        }
+        
+        i = i + 2 // 4 = 2 + 2
+    }
+    
+    return true
+}
+
+isPrime(number: 5)
+isPrime(number: 566)

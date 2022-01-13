@@ -9,7 +9,14 @@ import SwiftUI
 
 struct LeaderboardView: View {
     var body: some View {
-        RowView(index: 1, score: 10, date: Date())
+        ZStack {
+            Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+            VStack {
+                HeaderView()
+                LabelView()
+                RowView(index: 1, score: 10, date: Date())
+            }
+        }
     }
 }
 
@@ -39,8 +46,56 @@ struct RowView: View {
     }
 }
 
+struct HeaderView: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    var body: some View {
+        ZStack {
+            HStack {
+                if verticalSizeClass == .regular && horizontalSizeClass == .compact {
+                    BigBoldText(text: "Leaderboard")
+                        .padding(.leading)
+                    Spacer()
+                } else {
+                    BigBoldText(text: "Leaderboard")
+                }
+            }
+            HStack {
+                Spacer()
+                Button(action: {}) {
+                    RoundedImageViewFilled(systemName: "xmark")
+                        .padding(.trailing)
+                }
+            }
+        }
+        .padding(.leading)
+        .padding(.trailing)
+        .frame(maxWidth: Constants.LeaderboardConstants.leaderboardMaxRowWidth)
+    }
+}
+
+struct LabelView: View {
+    var body: some View {
+        HStack {
+            Spacer()
+                .frame(width: Constants.General.roundedViewLength)
+            Spacer()
+            AlertBodyText(text: "Score")
+                .frame(width: Constants.LeaderboardConstants.leaderboardScoreColWidth)
+            Spacer()
+            AlertBodyText(text: "Date")
+                .frame(width: Constants.LeaderboardConstants.leaderboardDateColWidth)
+        }
+    }
+}
+
 struct LeaderboardView_Previews: PreviewProvider {
     static var previews: some View {
-        LeaderboardView()
+        Group {
+            LeaderboardView()
+                .previewDevice("iPhone 11 Pro")
+            LeaderboardView()
+        }
     }
 }

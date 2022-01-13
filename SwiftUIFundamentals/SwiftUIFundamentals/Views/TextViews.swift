@@ -123,6 +123,18 @@ struct DateText: View {
     }
 }
 
+struct BigBoldText: View {
+    let text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .kerning(2.0)
+            .foregroundColor(Color("TextColor"))
+            .font(.title)
+            .fontWeight(.black)
+        
+    }
+}
 
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
@@ -136,6 +148,7 @@ struct TextViews_Previews: PreviewProvider {
             AlertButtonText(text: "Start new round")
             ScoreText(score: 450)
             DateText(date: Date())
+            BigBoldText(text: "Test")
         }
         .padding()
     }

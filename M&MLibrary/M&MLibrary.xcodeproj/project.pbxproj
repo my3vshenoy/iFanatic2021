@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA93679227A0728200A02E1C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93679127A0728200A02E1C /* DetailViewController.swift */; };
+		BA93679427A07C5800A02E1C /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93679327A07C5800A02E1C /* Library.swift */; };
 		BAB5950F27A058A800A2A83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5950E27A058A800A2A83E /* AppDelegate.swift */; };
 		BAB5951127A058A800A2A83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5951027A058A800A2A83E /* SceneDelegate.swift */; };
 		BAB5951327A058A800A2A83E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5951227A058A800A2A83E /* LibraryViewController.swift */; };
@@ -14,10 +16,11 @@
 		BAB5951827A058A900A2A83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB5951727A058A900A2A83E /* Assets.xcassets */; };
 		BAB5951B27A058A900A2A83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB5951927A058A900A2A83E /* LaunchScreen.storyboard */; };
 		BAB5952327A059D300A2A83E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5952227A059D300A2A83E /* Book.swift */; };
-		BAB5952527A05C1700A2A83E /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5952427A05C1700A2A83E /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA93679127A0728200A02E1C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BA93679327A07C5800A02E1C /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = "../../../../StarterProjectRepo/TableViews/06-reload-data/Library.swift"; sourceTree = "<group>"; };
 		BAB5950B27A058A800A2A83E /* M&MLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M&MLibrary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB5950E27A058A800A2A83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB5951027A058A800A2A83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +29,6 @@
 		BAB5951727A058A900A2A83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB5951A27A058A900A2A83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB5952227A059D300A2A83E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		BAB5952427A05C1700A2A83E /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,7 @@
 		BAB5952627A05C9200A2A83E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BAB5952427A05C1700A2A83E /* Library.swift */,
+				BA93679327A07C5800A02E1C /* Library.swift */,
 				BAB5952227A059D300A2A83E /* Book.swift */,
 			);
 			path = Model;
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB5951227A058A800A2A83E /* LibraryViewController.swift */,
+				BA93679127A0728200A02E1C /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -175,8 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB5952327A059D300A2A83E /* Book.swift in Sources */,
+				BA93679427A07C5800A02E1C /* Library.swift in Sources */,
 				BAB5951327A058A800A2A83E /* LibraryViewController.swift in Sources */,
-				BAB5952527A05C1700A2A83E /* Library.swift in Sources */,
+				BA93679227A0728200A02E1C /* DetailViewController.swift in Sources */,
 				BAB5950F27A058A800A2A83E /* AppDelegate.swift in Sources */,
 				BAB5951127A058A800A2A83E /* SceneDelegate.swift in Sources */,
 			);

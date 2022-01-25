@@ -14,7 +14,7 @@ class LibraryViewController: UITableViewController {
             fatalError("Nothing selected")
         }
         
-        let book = Library.books[indexPath.row]
+        let book = Library.books[indexPath.row - 1]
         return DetailViewController(coder: coder, book: book)
     }
     
@@ -37,9 +37,13 @@ extension LibraryViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath == IndexPath(row: 0, section: 0) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewBookCell", for: indexPath)
+            return cell
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(BookCell.self)", for: indexPath) as? BookCell else { fatalError("Cell not created")}
         
-        let book = Library.books[indexPath.row]
+        let book = Library.books[indexPath.row - 1]
         
         cell.titleLabel.text = book.title
         cell.authorLabel.text = book.title

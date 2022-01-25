@@ -25,7 +25,6 @@
 		BAB5951527A058A800A2A83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAB5951727A058A900A2A83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB5951A27A058A900A2A83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BAB5951C27A058A900A2A83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB5952227A059D300A2A83E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BAB5952427A05C1700A2A83E /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +43,6 @@
 		BAB5950227A058A700A2A83E = {
 			isa = PBXGroup;
 			children = (
-				BAB5951C27A058A900A2A83E /* Info.plist */,
 				BAB5950D27A058A800A2A83E /* M&MLibrary */,
 				BAB5950C27A058A800A2A83E /* Products */,
 			);

@@ -23,6 +23,11 @@ class LibraryViewController: UITableViewController {
         super.viewDidLoad()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 }
 
 //MARK: - DataSource
@@ -32,12 +37,15 @@ extension LibraryViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(BookCell.self)", for: indexPath) as? BookCell else { fatalError("Cell not created")}
         
         let book = Library.books[indexPath.row]
         
-        cell.textLabel?.text = book.title
-        cell.imageView?.image = book.image
+        cell.titleLabel.text = book.title
+        cell.authorLabel.text = book.title
+        cell.bookThumbnail.image = book.image
+        cell.bookThumbnail.layer.cornerRadius = 30
+
         return cell
     }
 }

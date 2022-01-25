@@ -8,17 +8,28 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    let book: Book
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     
+    @IBAction func updateImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.isSourceTypeAvailable(.camera) ? .camera : .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+    }
+    
+    private let book: Book
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         bookImageView.image = book.image
         titleLabel.text = book.title
         authorLabel.text = book.author
+        bookImageView.layer.cornerRadius = 16
+        bookImageView.layer.masksToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -29,15 +40,14 @@ class DetailViewController: UIViewController {
         self.book = book
         super.init(coder: coder)
     }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK: - UIImagePickerControllerDelegate
+extension DetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        bookImageView.image = selectedImage
+        Library.saveImage(selectedImage, forBook: book)
+        dismiss(animated: true)
     }
-    */
-
 }

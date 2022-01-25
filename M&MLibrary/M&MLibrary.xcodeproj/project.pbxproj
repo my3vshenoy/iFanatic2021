@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA93679227A0728200A02E1C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93679127A0728200A02E1C /* DetailViewController.swift */; };
 		BA93679427A07C5800A02E1C /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93679327A07C5800A02E1C /* Library.swift */; };
+		BA93679827A0881E00A02E1C /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93679727A0881E00A02E1C /* BookCell.swift */; };
 		BAB5950F27A058A800A2A83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5950E27A058A800A2A83E /* AppDelegate.swift */; };
 		BAB5951127A058A800A2A83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5951027A058A800A2A83E /* SceneDelegate.swift */; };
 		BAB5951327A058A800A2A83E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5951227A058A800A2A83E /* LibraryViewController.swift */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		BA93679127A0728200A02E1C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA93679327A07C5800A02E1C /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = "../../../../StarterProjectRepo/TableViews/06-reload-data/Library.swift"; sourceTree = "<group>"; };
+		BA93679527A07FC600A02E1C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA93679727A0881E00A02E1C /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		BAB5950B27A058A800A2A83E /* M&MLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M&MLibrary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB5950E27A058A800A2A83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB5951027A058A800A2A83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		BAB5950D27A058A800A2A83E /* M&MLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				BA93679527A07FC600A02E1C /* Info.plist */,
 				BAB5952627A05C9200A2A83E /* Model */,
 				BAB5952727A05C9D00A2A83E /* ViewController */,
 				BAB5952927A05CD200A2A83E /* Setup */,
@@ -83,6 +87,7 @@
 			children = (
 				BAB5951227A058A800A2A83E /* LibraryViewController.swift */,
 				BA93679127A0728200A02E1C /* DetailViewController.swift */,
+				BA93679727A0881E00A02E1C /* BookCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				BAB5952327A059D300A2A83E /* Book.swift in Sources */,
 				BA93679427A07C5800A02E1C /* Library.swift in Sources */,
 				BAB5951327A058A800A2A83E /* LibraryViewController.swift in Sources */,
+				BA93679827A0881E00A02E1C /* BookCell.swift in Sources */,
 				BA93679227A0728200A02E1C /* DetailViewController.swift in Sources */,
 				BAB5950F27A058A800A2A83E /* AppDelegate.swift in Sources */,
 				BAB5951127A058A800A2A83E /* SceneDelegate.swift in Sources */,

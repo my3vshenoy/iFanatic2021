@@ -73,6 +73,6 @@ extension UITextView {
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.resignFirstResponder))
         toolBar.items = [flexibleSpace, doneButton]
-        self.inputView = toolBar
+        self.inputAccessoryView = toolBar
     }
 }

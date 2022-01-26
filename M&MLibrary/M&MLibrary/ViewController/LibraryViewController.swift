@@ -18,6 +18,11 @@ class LibraryViewController: UITableViewController {
         return DetailViewController(coder: coder, book: book)
     }
     
+    @IBSegueAction func showNewBookView(_ coder: NSCoder) -> UITableViewController? {
+        guard let indexPath = tableView.indexPathForSelectedRow, indexPath.row == 0 else { fatalError("Incorrect indexpath for Add New Book Cell")}
+        
+        return NewBookViewController(coder: coder)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
